@@ -1,0 +1,21 @@
+server:
+  port: 4444
+#  servlet:
+#    context-path: /integ
+
+spring:
+  application:
+    name: integ-notification
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+    default-schema: public
+  datasource:
+    url: jdbc:postgresql://localhost:5432/integ
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
